@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경운대학교 비교과 가이드북 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #2d3a8c;
+        --secondary: #5a67d8;
+        --accent: #f6ad55;
+        --bg-light: #f8f9ff;
+        --surface: #ffffff;
+        --text-dark: #1a202c;
+        --text-gray: #4a5568;
+        --text-light: #718096;
+        --care-c: #f97316;
+        --care-a: #3b82f6;
+        --care-r: #10b981;
+        --care-e: #8b5cf6;
+        --glow-g: #f97316;
+        --glow-l: #eab308;
+        --glow-o: #3b82f6;
+        --glow-w: #8b5cf6;
+        --glow-u: #ef4444;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        color: var(--text-dark);
+        background-color: var(--surface);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s ease;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      #progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        background: linear-gradient(to right, var(--secondary), var(--accent));
+        z-index: 2000;
+        width: 0%;
+        transition: width 0.1s;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #edf2f7;
+        height: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        transition: all 0.3s ease;
+      }
+
+      nav .logo {
+        font-weight: 900;
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      nav .logo span {
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      nav ul li a {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-gray);
+      }
+
+      nav ul li a:hover {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #1e2a7a 0%, #3d52c4 50%, #5a67d8 100%);
+        color: white;
+        padding: 8rem 8% 6rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80vh;
+      }
+
+      .hero-bg-circle {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        top: -100px;
+        right: -100px;
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        width: 55%;
+      }
+
+      .hero-label {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.05em;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-sub {
+        font-size: 1.25rem;
+        font-weight: 300;
+        opacity: 0.9;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+      }
+
+      .hero-tags {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        font-size: 0.95rem;
+        opacity: 0.8;
+      }
+
+      .hero-tags span:first-child {
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .hero-tags hr {
+        height: 16px;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: white;
+        border: none;
+        box-shadow: 0 4px 15px rgba(246, 173, 85, 0.4);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(246, 173, 85, 0.5);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+      }
+
+      .hero-visual {
+        width: 40%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-end;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1.5rem 2rem;
+        border-radius: 16px;
+        color: white;
+        width: 300px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        transition: transform 0.3s ease;
+      }
+
+      .glass-card:hover {
+        transform: translateX(-10px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .glass-card h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        color: var(--accent);
+      }
+
+      .glass-card p {
+        font-size: 1rem;
+        opacity: 0.9;
+        font-weight: 400;
+      }
+
+      section {
+        padding: 6rem 8%;
+        position: relative;
+      }
+
+      section.bg-gray {
+        background-color: var(--bg-light);
+      }
+
+      .section-header {
+        margin-bottom: 4rem;
+        text-align: left;
+      }
+
+      .section-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--secondary);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .section-label::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: var(--accent);
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .section-desc {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        max-width: 600px;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .comp-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        box-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.06),
+          0 8px 24px rgba(45, 58, 140, 0.07);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid transparent;
+      }
+
+      .comp-card:hover {
+        transform: translateY(-6px);
+        box-shadow:
+          0 4px 6px rgba(0, 0, 0, 0.06),
+          0 12px 36px rgba(45, 58, 140, 0.12);
+        border-color: rgba(90, 103, 216, 0.2);
+      }
+
+      .comp-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+      }
+
+      .comp-card:nth-child(1)::before {
+        background: var(--care-c);
+      }
+      .comp-card:nth-child(2)::before {
+        background: var(--care-a);
+      }
+      .comp-card:nth-child(3)::before {
+        background: var(--care-r);
+      }
+      .comp-card:nth-child(4)::before {
+        background: var(--care-e);
+      }
+      .comp-card:nth-child(5)::before {
+        background: var(--accent);
+      }
+      .comp-card:nth-child(6)::before {
+        background: var(--glow-u);
+      }
+
+      .comp-num {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #f1f5f9;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        z-index: 0;
+      }
+
+      .comp-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+      }
+
+      .comp-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--primary);
+        position: relative;
+        z-index: 1;
+      }
+
+      .comp-text {
+        font-size: 0.95rem;
+        color: var(--text-gray);
+        line-height: 1.6;
+        position: relative;
+        z-index: 1;
+      }
+
+      .framework-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+      }
+
+      .care-card {
+        padding: 2.5rem 2rem;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .care-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .care-c {
+        background: rgba(249, 115, 22, 0.05);
+        border-left: 4px solid var(--care-c);
+      }
+      .care-a {
+        background: rgba(59, 130, 246, 0.05);
+        border-left: 4px solid var(--care-a);
+      }
+      .care-r {
+        background: rgba(16, 185, 129, 0.05);
+        border-left: 4px solid var(--care-r);
+      }
+      .care-e {
+        background: rgba(139, 92, 246, 0.05);
+        border-left: 4px solid var(--care-e);
+      }
+
+      .care-bg-letter {
+        font-size: 8rem;
+        font-weight: 900;
+        position: absolute;
+        bottom: -20px;
+        right: -10px;
+        opacity: 0.08;
+        line-height: 1;
+      }
+
+      .care-c .care-bg-letter {
+        color: var(--care-c);
+      }
+      .care-a .care-bg-letter {
+        color: var(--care-a);
+      }
+      .care-r .care-bg-letter {
+        color: var(--care-r);
+      }
+      .care-e .care-bg-letter {
+        color: var(--care-e);
+      }
+
+      .care-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .care-c .care-title {
+        color: var(--care-c);
+      }
+      .care-a .care-title {
+        color: var(--care-a);
+      }
+      .care-r .care-title {
+        color: var(--care-r);
+      }
+      .care-e .care-title {
+        color: var(--care-e);
+      }
+
+      .care-sub {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .care-desc {
+        font-size: 0.85rem;
+        color: var(--text-light);
+      }
+
+      .glow-container {
+        background: white;
+        border-radius: 24px;
+        padding: 3rem 4rem;
+        box-shadow:
+          0 10px 25px rgba(0, 0, 0, 0.03),
+          0 1px 3px rgba(0, 0, 0, 0.02);
+        position: relative;
+      }
+
+      .glow-steps {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .glow-steps::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #e2e8f0;
+        z-index: 0;
+      }
+
+      .glow-step {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        flex: 1;
+      }
+
+      .glow-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+        margin: 0 auto 1.5rem;
+        border: 4px solid white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .glow-step:hover .glow-circle {
+        transform: scale(1.1);
+      }
+
+      .glow-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+      }
+
+      .glow-desc {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        line-height: 1.4;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .type-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+      }
+
+      .type-card:hover {
+        border-color: var(--secondary);
+        box-shadow: 0 10px 30px rgba(90, 103, 216, 0.1);
+      }
+
+      .type-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .type-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: var(--bg-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        color: var(--primary);
+      }
+
+      .type-info h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 0.25rem;
+      }
+
+      .type-info span {
+        font-size: 0.85rem;
+        color: var(--secondary);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .type-desc {
+        color: var(--text-gray);
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .type-list {
+        border-top: 1px dashed #cbd5e0;
+        padding-top: 1rem;
+      }
+
+      .type-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+      }
+
+      .type-list li::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .tabs {
+        margin-bottom: 3rem;
+        border-bottom: 1px solid #e2e8f0;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .tab-btn {
+        padding: 1rem 0.5rem;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        color: var(--text-light);
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .tab-btn.active {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .tab-btn.active::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary);
+        border-radius: 3px 3px 0 0;
+      }
+
+      .tab-content {
+        display: none;
+        animation: fadeUp 0.5s ease;
+      }
+
+      .tab-content.active {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .prog-card {
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        border: 1px solid #f1f5f9;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .prog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(45, 58, 140, 0.08);
+        border-color: rgba(90, 103, 216, 0.3);
+      }
+
+      .prog-tags {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+      }
+
+      .badge-career {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+      .badge-acad {
+        background: #eff6ff;
+        color: #1d4ed8;
+      }
+      .badge-resil {
+        background: #ecfdf5;
+        color: #047857;
+      }
+      .badge-exp {
+        background: #f5f3ff;
+        color: #6d28d9;
+      }
+      .badge-step {
+        background: #f1f5f9;
+        color: #475569;
+      }
+
+      .prog-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        line-height: 1.4;
+      }
+
+      .prog-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        padding-top: 1rem;
+        border-top: 1px solid #f1f5f9;
+      }
+
+      .prog-target {
+        font-size: 0.85rem;
+        color: var(--text-light);
+      }
+
+      .prog-benefit {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--care-c);
+      }
+
+      .timeline-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .year-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem 1.5rem;
+        border: 1px solid #e2e8f0;
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+
+      .year-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .year-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid;
+      }
+
+      .year-num {
+        font-size: 2.5rem;
+        font-weight: 900;
+        line-height: 1;
+        opacity: 0.2;
+      }
+
+      .year-title {
+        text-align: right;
+      }
+
+      .year-title h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+      }
+
+      .year-title span {
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: block;
+      }
+
+      .year-1 {
+        border-bottom-color: var(--care-c);
+      }
+      .year-1 h4 {
+        color: var(--care-c);
+      }
+      .year-2 {
+        border-bottom-color: var(--glow-l);
+      }
+      .year-2 h4 {
+        color: var(--glow-l);
+      }
+      .year-3 {
+        border-bottom-color: var(--care-a);
+      }
+      .year-3 h4 {
+        color: var(--care-a);
+      }
+      .year-4 {
+        border-bottom-color: var(--care-e);
+      }
+      .year-4 h4 {
+        color: var(--care-e);
+      }
+
+      .year-list li {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin-bottom: 0.75rem;
+        padding-left: 1.25rem;
+        position: relative;
+      }
+
+      .year-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--secondary);
+        font-weight: bold;
+      }
+
+      .dept-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .dept-card {
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.25s ease;
+      }
+
+      .dept-card:hover {
+        border-color: var(--secondary);
+        background: #fdfdfe;
+      }
+
+      .dept-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .dept-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .dept-name {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--text-dark);
+      }
+
+      .dept-programs {
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .dept-contact {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        padding-top: 0.75rem;
+        border-top: 1px solid #f1f5f9;
+      }
+
+      .apply-layout {
+        display: flex;
+        gap: 4rem;
+      }
+
+      .apply-steps {
+        flex: 1;
+      }
+
+      .step-item {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .step-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 40px;
+        bottom: -20px;
+        width: 2px;
+        background: #e2e8f0;
+      }
+
+      .step-num {
+        width: 40px;
+        height: 40px;
+        background: var(--secondary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .step-content h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .step-content p {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+      }
+
+      .mileage-info {
+        flex: 1;
+      }
+
+      .mileage-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+      }
+
+      .mileage-table th {
+        background: var(--primary);
+        color: white;
+        text-align: left;
+        padding: 1rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .mileage-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+      }
+
+      .mileage-tiers {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+      }
+
+      .tier {
+        background: white;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .tier h5 {
+        font-size: 0.9rem;
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+      }
+
+      .tier-bronze {
+        color: #cd7f32;
+      }
+      .tier-silver {
+        color: #718096;
+      }
+      .tier-gold {
+        color: #eab308;
+      }
+      .tier-diamond {
+        color: #3b82f6;
+      }
+
+      .tier span {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        display: block;
+      }
+
+      details {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      details[open] {
+        border-color: var(--secondary);
+        box-shadow: 0 4px 12px rgba(90, 103, 216, 0.1);
+      }
+
+      summary {
+        padding: 1.25rem 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-dark);
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary::after {
+        content: '+';
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--secondary);
+        transition: transform 0.3s ease;
+      }
+
+      details[open] summary::after {
+        transform: rotate(45deg);
+      }
+
+      details p {
+        padding: 0 1.5rem 1.5rem;
+        margin: 0;
+        color: var(--text-gray);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .contact-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border-top: 4px solid var(--primary);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .contact-card h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+
+      .contact-info {
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        line-height: 1.6;
+      }
+
+      footer {
+        background: var(--primary);
+        color: white;
+        padding: 4rem 10%;
+        text-align: center;
+      }
+
+      .footer-logo {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .footer-slogan {
+        font-size: 1rem;
+        font-weight: 300;
+        opacity: 0.7;
+        margin-bottom: 2rem;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-links a {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
+      .footer-copy {
+        font-size: 0.8rem;
+        opacity: 0.5;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1024px) {
+        .hero {
+          flex-direction: column;
+          padding-top: 6rem;
+          text-align: center;
+        }
+        .hero-content,
+        .hero-visual {
+          width: 100%;
+          align-items: center;
+        }
+        .hero-tags {
+          justify-content: center;
+        }
+        .hero-visual {
+          margin-top: 3rem;
+        }
+        .care-grid,
+        .framework-grid,
+        .timeline-container,
+        .contact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .apply-layout {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .grid-2,
+        .care-grid,
+        .framework-grid,
+        .timeline-container,
+        .contact-grid,
+        .glow-steps {
+          grid-template-columns: 1fr;
+        }
+        .glow-steps {
+          flex-direction: column;
+          gap: 2rem;
+        }
+        .glow-steps::before {
+          width: 2px;
+          height: 100%;
+          left: 50%;
+          top: 0;
+        }
+        .glow-circle {
+          background: var(--bg-light);
+        }
+        nav ul {
+          display: none;
+        }
+        .hero-visual {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body style="" data-new-gr-c-s-loaded="14.1135.0" data-new-gr-c-s-check-loaded="14.1135.0" data-gr-ext-installed="">
+    <div id="progress-bar" style="width: 0%;"></div>
+
+    <nav>
+      <a href="#" class="logo">KW <span>2026 비교과 가이드북</span></a>
+      <ul>
+        <li><a href="#vision">비전</a></li>
+        <li><a href="#kw-framework">경운대학교 비교과 교육과정 체계도</a></li>
+        <li><a href="#framework">CARE모델</a></li>
+        <li><a href="#curriculum">체계도</a></li>
+        <li><a href="#programs">프로그램</a></li>
+        <li><a href="#roadmap">로드맵</a></li>
+        <li><a href="#apply">신청/마일리지</a></li>
+        <li><a href="#faq">문의</a></li>
+      </ul>
+    </nav>
+
+<header id="vision" class="hero">
+
+  <!-- 이미지 -->
+  <div class="hero-image">
+    <img src="img02.png">
+  </div>
+
+  <div class="hero-bg-circle"></div>
+
+  <div class="hero-content">
+    
+    <style>
+/* 🔥 이미지 영역 */
+.hero-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 35%;   /* ← 여기만 조절하면 크기 변경됨 */
+  height: 100%;
+
+  z-index: 0;
+}
+
+/* 🔥 이미지 설정 */
+.hero-image img {
+  width: 100%;   /* 반드시 100% */
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  opacity: 0.4; ##투명도
+}
+
+<style>
+/* 기존 CSS들 */
+
+.hero-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+}
+
+/* 🔥 여기 아래에 추가 (모바일 대응) */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+</style>
+
+        <span class="hero-label">2026 학생성공 가이드북</span>
+        <h1>
+          K-Way, <br>
+          Make Impact
+        </h1>
+        <p class="hero-sub">평범한 일상을 비범한 성취로 바꾸는 경운대학교만의 특별한 성장 마법을 경험하세요.</p>
+
+        <div class="hero-tags">
+          <span>New Gen University</span>
+          <hr>
+          <span>미래 시대를 선도하는 새로운 대학</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#programs" class="btn btn-primary">프로그램 둘러보기</a>
+          <a href="#mileage" class="btn btn-outline">마일리지 안내</a>
+        </div>
+      </div>
+      <div class="hero-visual-vertical">
+
+  <div class="glass-card-v">
+    <span class="card-number"></span>
+    <h3>230+</h3>
+    <p>맞춤형 비교과 프로그램</p>
+  </div>
+
+  <div class="glass-card-v">
+    <span class="card-number"></span>
+    <h3>13</h3>
+    <p>전문 지원 부서</p>
+  </div>
+
+  <div class="glass-card-v">
+    <span class="card-number"></span>
+    <h3>4-Step</h3>
+    <p>성장 로드맵 시스템</p>
+  </div>
+
+</div>
+
+<style>
+.hero-visual-vertical {
+  display: flex;
+  flex-direction: column;   /* 🔥 세로 정렬 */
+  gap: 28px;
+  margin-top: 40px;
+}
+
+<style>
+/* ===== 카드 컨테이너 ===== */
+.hero-visual-vertical {
+  position: relative;
+  margin-top: -50px;   /* 🔥 위로 끌어올림 (거리 해결) */
+  margin-left: 120px;  /* 🔥 K-Way 옆으로 붙임 */
+}
+
+/* ===== 카드 기본 ===== */
+.glass-card-v {
+  width: 300px;
+  padding: 35px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  color: #fff;
+
+  /* 🔥 애니메이션 */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* ===== 카드 언발란스 배치 ===== */
+.glass-card-v:nth-child(2) {
+  margin-left: 120px;
+  animation-delay: 0.2s;
+}
+
+.glass-card-v:nth-child(2) {
+  margin-left: 80px;   /* 🔥 오른쪽으로 밀기 */
+  margin-top: 20px;
+  animation-delay: 0.4s;
+}
+
+.glass-card-v:nth-child(2) {
+  margin-left: 100px;
+  margin-top: 20px;
+  animation-delay: 0.6s;
+}
+
+/* ===== 숫자 ===== */
+.glass-card-v h3 {
+  font-size: 44px;
+  font-weight: 900;
+  color: #ffb300;
+  margin-bottom: 12px;
+}
+
+/* 설명 */
+.glass-card-v p {
+  font-size: 16px;
+}
+
+/* ===== 등장 애니메이션 ===== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+  
+    </header>
+
+
+    <!-- ===== 체계도 영역 ===== -->
+<section id="kw-framework" class="reveal">
+
+  <div class="section-header">
+    <div class="section-label">KW-FRAMEWORK</div>
+    <h2 class="section-title">경운대학교 비교과 교육과정 체계도</h2>
+    <p class="section-desc">
+      학생의 전인적 성장과 자기주도적 역량 개발을 지원하고 
+      전공·진로·정서·대학생활 전 영역에서의 통합적 학생성공을 실현합니다.
+    </p>
+  </div>
+
+  <!-- 🔥 카드 -->
+  <div class="framework-card">
+    <img src="img01.png" alt="경운대학교 비교과 교육과정 체계도">
+    <div class="framework-caption">경운대학교 비교과 교육과정 체계도</div>
+  </div>
+
+</section>
+
+<!-- ===== 스타일 (페이지 아무데나 style 추가) ===== -->
+<style>
+
+.framework-card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.framework-card img {
+  width: 100%;
+  max-width: 750px;   /* 🔥 여기로 크기 조절 */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.framework-caption {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+</style>
+
+    <section class="reveal">
+      <div class="section-header">
+        <div class="section-label">Core Competencies</div>
+        <h2 class="section-title">경운대학교 6대 핵심역량</h2>
+        <p class="section-desc">미래 사회가 요구하는 6가지 핵심 역량을 균형 있게 갖춘 인재로 성장합니다.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="comp-card">
+          <span class="comp-num">01</span>
+          <div class="comp-icon">💻</div>
+          <h3 class="comp-title">디지털 문해력</h3>
+          <p class="comp-text">
+            AI·SW 등 디지털 기술의 기본 원리를 이해하고, 정보를 탐색·분석하여 문제를 해결하는 능력
+          </p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-num">02</span>
+          <div class="comp-icon">🤝</div>
+          <h3 class="comp-title">상호작용 능력</h3>
+          <p class="comp-text">다양한 가치관을 가진 사람들과 열린 태도로 소통하고 협력하는 언어적·비언어적 역량</p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-num">03</span>
+          <div class="comp-icon">🌱</div>
+          <h3 class="comp-title">윤리적 시민의식</h3>
+          <p class="comp-text">공동체의 일원으로서 사회적 책임과 직업윤리를 이해하고 ESG 가치를 실천하는 능력</p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-num">04</span>
+          <div class="comp-icon">⭐</div>
+          <h3 class="comp-title">자기주도성</h3>
+          <p class="comp-text">스스로 목표를 설정하고 필요한 자원을 활용하여 성장을 주도적으로 설계·관리하는 역량</p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-num">05</span>
+          <div class="comp-icon">🔭</div>
+          <h3 class="comp-title">확장적 사고력</h3>
+          <p class="comp-text">
+            기존의 틀에 얽매이지 않고 다양한 학문과 관점을 융합하여 혁신적인 해결책을 탐구하는 능력
+          </p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-num">06</span>
+          <div class="comp-icon">🏆</div>
+          <h3 class="comp-title">전문역량</h3>
+          <p class="comp-text">전공 분야의 핵심 지식과 기술을 바탕으로 실제 현장에서 성과를 창출하는 실무 전문 능력</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="framework" class="bg-gray reveal">
+      <div class="section-header">
+        <div class="section-label">Educational Framework</div>
+        <h2 class="section-title">CARE &amp; GLOW-UP 모델</h2>
+        <p class="section-desc">성공적인 대학생활을 위한 경운대학교만의 맞춤형 비교과 교육 지원 시스템입니다.</p>
+      </div>
+
+      <div class="framework-grid">
+        <div class="care-card care-c">
+          <span class="care-bg-letter">C</span>
+          <h3 class="care-title">Career</h3>
+          <span class="care-sub">진로·취창업 역량 강화</span>
+          <p class="care-desc">"나의 진로를 디자인하다"</p>
+        </div>
+        <div class="care-card care-a">
+          <span class="care-bg-letter">A</span>
+          <h3 class="care-title">Academic</h3>
+          <span class="care-sub">혁신적 학습 지원</span>
+          <p class="care-desc">"공부의 고수가 되다"</p>
+        </div>
+        <div class="care-card care-r">
+          <span class="care-bg-letter">R</span>
+          <h3 class="care-title">Resilience</h3>
+          <span class="care-sub">심리·정서 회복</span>
+          <p class="care-desc">"마음의 근육을 키우다"</p>
+        </div>
+        <div class="care-card care-e">
+          <span class="care-bg-letter">E</span>
+          <h3 class="care-title">Experience</h3>
+          <span class="care-sub">대학 생활 밀착 지원</span>
+          <p class="care-desc">"캠퍼스 라이프를 즐기다"</p>
+        </div>
+      </div>
+
+      <div class="glow-container">
+        <div class="glow-steps">
+          <div class="glow-step">
+            <div class="glow-circle" style="background: var(--glow-g)">G</div>
+            <h4 class="glow-title">Goal-setting</h4>
+            <p class="glow-desc">목표 설정 단계<br>나를 이해하고 진로 탐색</p>
+          </div>
+          <div class="glow-step">
+            <div class="glow-circle" style="background: var(--glow-l)">L</div>
+            <h4 class="glow-title">Learning</h4>
+            <p class="glow-desc">학습 연계 단계<br>전공·교양·비교과 연결</p>
+          </div>
+          <div class="glow-step">
+            <div class="glow-circle" style="background: var(--glow-o)">O</div>
+            <h4 class="glow-title">Opportunity</h4>
+            <p class="glow-desc">기회 탐색 단계<br>현장 경험과 글로벌 도전</p>
+          </div>
+          <div class="glow-step">
+            <div class="glow-circle" style="background: var(--glow-w)">W</div>
+            <h4 class="glow-title">Well-being</h4>
+            <p class="glow-desc">실행 및 균형 단계<br>심리적 안정과 실전 적용</p>
+          </div>
+          <div class="glow-step">
+            <div class="glow-circle" style="background: var(--glow-u)">U</div>
+            <h4 class="glow-title">Upgrade</h4>
+            <p class="glow-desc">성과 공유 단계<br>나의 성취를 세상에 공유</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="curriculum" class="reveal">
+      <div class="section-header">
+        <div class="section-label">Structure</div>
+        <h2 class="section-title">교육과정별 비교과 체계도</h2>
+        <p class="section-desc">정규 교육과정을 보완하고 확장하는 4가지 유형의 비교과 체계입니다.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="type-card">
+          <div class="type-header">
+            <div class="type-icon">📘</div>
+            <div class="type-info">
+              <h3>교양연계 비교과</h3>
+              <span>Type 01</span>
+            </div>
+          </div>
+          <p class="type-desc">교양 교육과정에서 형성되는 기초 학습역량, 문해력 및 학습전략을 심화·확장하는 프로그램</p>
+          <ul class="type-list">
+            <li>학업적응프로그램</li>
+            <li>자기주도학습 코칭 프로그램</li>
+            <li>KW-러닝랩</li>
+            <li>KW 학습역량 부트캠프</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <div class="type-header">
+            <div class="type-icon">🔬</div>
+            <div class="type-info">
+              <h3>전공연계 비교과</h3>
+              <span>Type 02</span>
+            </div>
+          </div>
+          <p class="type-desc">전공 교과에서 다루는 이론과 기술, 직무역량을 현장 중심으로 강화하는 프로그램</p>
+          <ul class="type-list">
+            <li>전공 실무 프로젝트 프로그램</li>
+            <li>전공 심화 시뮬레이션 프로그램</li>
+            <li>산업연계 직무역량 프로그램</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <div class="type-header">
+            <div class="type-icon">🎪</div>
+            <div class="type-info">
+              <h3>프로그램형 비교과</h3>
+              <span>Type 03</span>
+            </div>
+          </div>
+          <p class="type-desc">진단, 상담, 멘토링 및 코칭 등 학생 성장을 체계적으로 지원하는 구조화된 지원 프로그램</p>
+          <ul class="type-list">
+            <li>KW 핵심역량 진단·성장 프로그램</li>
+            <li>다층 구조 멘토링프로그램</li>
+            <li>4-REST 심리검사</li>
+            <li>AI 기반 취업·진로 코칭 프로그램</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <div class="type-header">
+            <div class="type-icon">🎭</div>
+            <div class="type-info">
+              <h3>활동형 비교과</h3>
+              <span>Type 04</span>
+            </div>
+          </div>
+          <p class="type-desc">체험, 참여, 경험 중심의 비교과 활동을 통해 학생의 소속감과 도전의식 및 실천역량 제고</p>
+          <ul class="type-list">
+            <li>KW 창의·창업 챌린지 프로그램</li>
+            <li>글로벌 페스티벌</li>
+            <li>글로벌 경험·문화 프로그램</li>
+            <li>KW 소셜 이노베이터 프로그램</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="bg-gray reveal">
+      <div class="section-header">
+        <div class="section-label">Programs</div>
+        <h2 class="section-title">유형별 비교과 프로그램</h2>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'career')">진로지원</button>
+        <button class="tab-btn" onclick="openTab(event, 'academic')">학습역량</button>
+        <button class="tab-btn" onclick="openTab(event, 'counsel')">상담지원</button>
+        <button class="tab-btn" onclick="openTab(event, 'job')">취업지원</button>
+        <button class="tab-btn" onclick="openTab(event, 'campus')">대학생활</button>
+        <button class="tab-btn" onclick="openTab(event, 'startup')">창업지원</button>
+      </div>
+
+      <div id="career" class="tab-content active">
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">생성형 AI 기반 DX/DT 진단분석</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+            <span class="competency">Digital Literacy</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Learning</span>
+          </div>
+          <h3 class="prog-title">Build-Up 진로선택 프로그램</h3>
+          <div class="prog-footer">
+            <span class="prog-target">1-2학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+            <span class="competency">Self-Directed Learning</span>
+          </div>
+        </div>
+         <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Goal-setting</span>
+          </div>
+          <h3 class="prog-title">대학생활 동기유발 프로그램</h3>
+          <div class="prog-footer">
+            <span class="prog-target">1-2학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+            <span class="competency">Self-Directed Learning</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">REAL 멘토링 4.0+</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">수료증 + 마일리지</span>
+            <span class="competency">Self-Directed Learning</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">기업탐방 프로그램</h3>
+          <div class="prog-footer">
+            <span class="prog-target">1-2학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+            <span class="competency">Professional Competency</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">국내외 현장탐방 프로그램(</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+            <span class="competency"> Interpersonal Competency</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="academic" class="tab-content">
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-acad">Academic</span>
+            <span class="badge badge-step">Goal-setting</span>
+          </div>
+          <h3 class="prog-title">재학생 핵심역량진단 (KW-CESA)</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-acad">Academic</span>
+            <span class="badge badge-step">Goal-setting</span>
+          </div>
+          <h3 class="prog-title">학습전략검사 (MLST-II)</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-acad">Academic</span>
+            <span class="badge badge-step">Learning</span>
+          </div>
+          <h3 class="prog-title">학습공동체 (튜터링)</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">장학금 + 마일리지</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-acad">Academic</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">모의토익</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-acad">Academic</span>
+            <span class="badge badge-step">Learning</span>
+          </div>
+          <h3 class="prog-title">KW-러닝랩</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="counsel" class="tab-content">
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-resil">Resilience</span>
+            <span class="badge badge-step">Well-being</span>
+          </div>
+          <h3 class="prog-title">지도교수 상담 (1·2학기)</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-resil">Resilience</span>
+            <span class="badge badge-step">Goal-setting</span>
+          </div>
+          <h3 class="prog-title">4-REST 심리검사</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-resil">Resilience</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">또래상담사 양성과정</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">수료증 + 마일리지</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-resil">Resilience</span>
+            <span class="badge badge-step">Well-being</span>
+          </div>
+          <h3 class="prog-title">마음돌봄 힐링 숲</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="job" class="tab-content">
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Well-being</span>
+          </div>
+          <h3 class="prog-title">AI 활용 자기소개서 클리닉</h3>
+          <div class="prog-footer">
+            <span class="prog-target">3-4학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">취업 선배와의 만남</h3>
+          <div class="prog-footer">
+            <span class="prog-target">3-4학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">기업채용설명회</h3>
+          <div class="prog-footer">
+            <span class="prog-target">3-4학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Well-being</span>
+          </div>
+          <h3 class="prog-title">Jump-Up 취업역량 강화캠프</h3>
+          <div class="prog-footer">
+            <span class="prog-target">3-4학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Upgrade</span>
+          </div>
+          <h3 class="prog-title">AI 면접 대비 프로그램</h3>
+          <div class="prog-footer">
+            <span class="prog-target">4학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="campus" class="tab-content">
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-exp">Experience</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">KW 소셜 이노베이터즈 (봉사)</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">수료증 + 마일리지</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-exp">Experience</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">해외어학연수·글로벌 탐방</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">장학혜택</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-exp">Experience</span>
+            <span class="badge badge-step">Opportunity</span>
+          </div>
+          <h3 class="prog-title">글로벌 스포츠 데이</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-acad">Academic</span>
+            <span class="badge badge-step">Learning</span>
+          </div>
+          <h3 class="prog-title">도서관 전자정보박람회</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 + 시상</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="startup" class="tab-content">
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Upgrade</span>
+          </div>
+          <h3 class="prog-title">창업 MASTER 캠프</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">시상 + 마일리지</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Learning</span>
+          </div>
+          <h3 class="prog-title">크라우드펀딩 아카데미</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">마일리지 지급</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Upgrade</span>
+          </div>
+          <h3 class="prog-title">학생창업 시제품제작 지원</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">제작비 지원</span>
+          </div>
+        </div>
+        <div class="prog-card">
+          <div class="prog-tags">
+            <span class="badge badge-career">Career</span>
+            <span class="badge badge-step">Learning</span>
+          </div>
+          <h3 class="prog-title">AI Operator 양성과정 (RISE)</h3>
+          <div class="prog-footer">
+            <span class="prog-target">전학년</span>
+            <span class="prog-benefit">수료증 발급</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="reveal">
+      <div class="section-header">
+        <div class="section-label">Growth Roadmap</div>
+        <h2 class="section-title">학년별 성장 로드맵</h2>
+        <p class="section-desc">1학년부터 4학년까지, 단계별 맞춤형 프로그램으로 성장 여정을 제안합니다.</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- 1학년 -->
+        <div class="year-card year-1">
+          <div class="year-header">
+            <span class="year-num">01</span>
+            <div class="year-title">
+              <h4>DISCOVERY</h4>
+              <span>나를 발견하는 해 🌱</span>
+            </div>
+          </div>
+          <ul class="year-list">
+            <li>신입생 의식조사 &amp; 핵심역량진단(KW-CESA)</li>
+            <li>동기유발 EROOM 프로젝트</li>
+            <li>학습전략검사(MLST-II) &amp; 학습법 특강</li>
+            <li>지도교수 상담 &amp; 대학생활 적응 지원</li>
+            <li>학습공동체 튜터링 입문</li>
+          </ul>
+        </div>
+
+        <!-- 2학년 -->
+        <div class="year-card year-2">
+          <div class="year-header">
+            <span class="year-num">02</span>
+            <div class="year-title">
+              <h4>STRATEGY</h4>
+              <span>전략을 수립하는 해 📈</span>
+            </div>
+          </div>
+          <ul class="year-list">
+            <li>Build-Up 진로선택 프로그램</li>
+            <li>학습컨설팅 및 공부법 심화 클리닉</li>
+            <li>모의토익 및 영어 역량 강화</li>
+            <li>글로벌 프렌즈 참여</li>
+            <li>KW-러닝랩 자기주도 학습</li>
+          </ul>
+        </div>
+
+        <!-- 3학년 -->
+        <div class="year-card year-3">
+          <div class="year-header">
+            <span class="year-num">03</span>
+            <div class="year-title">
+              <h4>EXPERIENCE</h4>
+              <span>현장을 경험하는 해 🔥</span>
+            </div>
+          </div>
+          <ul class="year-list">
+            <li>전공 실무 전문가 특강 및 현장탐방</li>
+            <li>취업 선배와의 만남 (멘토링)</li>
+            <li>REAL 멘토링 4.0+ 참여</li>
+            <li>창업 아이디어 발굴 및 경진대회</li>
+            <li>RISE사업단 전문 과정 참여</li>
+          </ul>
+        </div>
+
+        <!-- 4학년 -->
+        <div class="year-card year-4">
+          <div class="year-header">
+            <span class="year-num">04</span>
+            <div class="year-title">
+              <h4>ACTION</h4>
+              <span>미래를 실행하는 해 🏆</span>
+            </div>
+          </div>
+          <ul class="year-list">
+            <li>실전 면접 대비 및 AI 면접 프로그램</li>
+            <li>AI 활용 자기소개서 클리닉</li>
+            <li>국가시험·자격증 대비 집중 과정</li>
+            <li>KW-CDP 포트폴리오 완성·공유</li>
+            <li>Jump-Up 취업역량 강화캠프</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 부서별 비교과 프로그램 -->
+    <section id="dept" class="bg-gray reveal">
+      <div class="section-header">
+        <div class="section-label">Departments</div>
+        <h2 class="section-title">부서별 비교과 프로그램</h2>
+        <p class="section-desc">각 부서의 전문성을 바탕으로 체계적인 비교과 지원 시스템을 운영합니다.</p>
+      </div>
+      <div class="dept-grid">
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: var(--primary)">🏫</div>
+            <div>
+              <div class="dept-name">인재개발처</div>
+              <div style="font-size:0.78rem;color:var(--secondary);font-weight:600;">학생 역량 개발 총괄</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>재학생 핵심역량 진단(KW-CESA)</li>
+          <li>지도교수 상담(1·2학기)</li>
+          <li>동기유발 EROOM 프로젝트</li>
+          <li>KW-CDP 진로설계 포트폴리오</li>
+          <li>창업 MASTER 캠프</li>
+          <li>시제품 제작 지원</li>
+          </ul>
+          <div class="dept-contact">📍 어드민센터 2층 | ☎ 054-479-1034</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: var(--care-e)">🧠</div>
+            <div>
+              <div class="dept-name">학생상담센터</div>
+              <div style="font-size:0.78rem;color:var(--care-e);font-weight:600;">심리·정서 전문 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>4-REST 심리검사</li>
+          <li>지도교수 상담(1·2학기)</li>
+          <li>마음 톡톡 상담</li>
+          <li>찾아가는 심리검사 서비스</li>
+          <li>또래상담사 양성과정</li>
+          <li>마음돌봄 힐링 숲</li>
+          <li>위기학생 집중 지원</li>
+          </ul>
+          <div class="dept-contact">📍 벽강중앙도서관 5층 | ☎ 054-479-4176</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: var(--care-a)">📖</div>
+            <div>
+              <div class="dept-name">교수학습지원센터</div>
+              <div style="font-size:0.78rem;color:var(--care-a);font-weight:600;">학생역량·튜터링 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>학습전략검사 및 컨설팅</li>
+          <li>학습공동체(튜터,튜티)</li>
+          <li>KW-러닝랩(Learning Lab)</li>
+          <li>AI 교수학습지원</li>
+          </ul>
+          <div class="dept-contact">📍 벽강중앙도서관 1층 | ☎ 054-479-1155</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: #92400e">📚</div>
+            <div>
+              <div class="dept-name">벽강중앙도서관</div>
+              <div style="font-size:0.78rem;color:#92400e;font-weight:600;">정보 활용 역량 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>도서관 전자정보박람회</li>
+          <li>도서관 이용교육</li>
+          <li>도서관 잡(job)스테이션</li>
+          </ul>
+          <div class="dept-contact">📍 벽강중앙도서관 3층 | ☎ 054-479-1081</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: #0d9488">🌏</div>
+            <div>
+              <div class="dept-name">국제처</div>
+              <div style="font-size:0.78rem;color:#0d9488;font-weight:600;">글로벌 역량·유학생 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>글로벌 프렌즈 프로그램</li>
+          <li>글로벌 라운지(Global Lounge)</li>
+          <li>KWCC(connect & care)</li>
+          </ul>
+          <div class="dept-contact">📍 본관 2층 | ☎ 054-479-4058</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: var(--care-c)">💼</div>
+            <div>
+              <div class="dept-name">대학일자리플러스센터</div>
+              <div style="font-size:0.78rem;color:var(--care-c);font-weight:600;">취업·채용용 전문 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>진로 및 취업 상담</li>
+          <li>컨설턴트와 함께하는 취업컨설팅</li>
+          <li>현장전문가 진로특강</li>
+          </ul>
+          <div class="dept-contact">📍 10호관 1층 | ☎ 054-479-4032</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: #db2777">🚀</div>
+            <div>
+              <div class="dept-name">RISE사업단</div>
+              <div style="font-size:0.78rem;color:#db2777;font-weight:600;">지역특화 전문 양성</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>AI 기반 물류 데이터 분석 및 문제 해결 실습 프로그램</li>
+          <li>AI Operator 양성과정</li>
+          <li>생성형 AI 기반 DX·DT·AX 분석 및 개발과정</li>
+          </ul>
+          <div class="dept-contact">📍 어드민센터 1층 | ☎ 054-479-4140</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: #475569">🏢</div>
+            <div>
+              <div class="dept-name">사회봉사지원센터</div>
+              <div style="font-size:0.78rem;color:#475569;font-weight:600;">사회봉사활동 지원</div>
+            </div>
+          </div>
+          <p class="dept-programs">KW 소셜 이노베이터즈</p>
+          <div class="dept-contact">📍 어드민센터 1층 | ☎ 054-479-4014</div>
+        </div>
+     <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: #92400e">📚</div>
+            <div>
+              <div class="dept-name">SW중심대학사업단</div>
+              <div style="font-size:0.78rem;color:#92400e;font-weight:600;">SW교육 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>SW pioneer program</li>
+          <li>SW융합 전문가교육프로그램</li>
+          <li>자격증과정 교육프로그램</li>
+          </ul>
+          <div class="dept-contact">📍 2호관 2층 | ☎ 054-479-1145</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: #0d9488">🌏</div>
+            <div>
+              <div class="dept-name">대학생활지원센터</div>
+              <div style="font-size:0.78rem;color:#0d9488;font-weight:600;">학생 정주여견 개선 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>재학생·유학생 적응 프로그램</li>
+          </ul>
+          <div class="dept-contact">📍 학생생활관 C동 1층 | ☎ 054-479-4397</div>
+        </div>
+
+        <div class="dept-card">
+          <div class="dept-header">
+            <div class="dept-icon" style="background: var(--care-c)">💼</div>
+            <div>
+              <div class="dept-name">대학혁신지원사업단</div>
+              <div style="font-size:0.78rem;color:var(--care-c);font-weight:600;">뉴노멀 교육혁신 지원</div>
+            </div>
+          </div>
+          <ul class="dept-programs">
+          <li>전공 실무 프로젝트 프로그램</li>
+          <li>전공 심화 시뮬레이션 프로그램</li>
+          <li>비교과프로그램 지원</li>
+          </ul>
+          <div class="dept-contact">📍 어드민센터 1층 | ☎ 054-479-4006</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 신청 방법 & 마일리지 -->
+    <section id="mileage" class="reveal">
+      <div class="section-header">
+        <div class="section-label">Apply &amp; Mileage</div>
+        <h2 class="section-title">신청 방법 &amp; 마일리지 제도</h2>
+        <p class="section-desc">5단계 간단 신청으로 마일리지를 쌓고, 다양한 혜택을 누려보세요!</p>
+      </div>
+
+      <div class="apply-layout">
+        <!-- 신청 단계 -->
+        <div class="apply-steps">
+          <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:2rem;color:var(--primary)">📋 프로그램 신청 5단계</h3>
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>통합 비교과 시스템 접속</h4>
+              <p>경운대학교 포털(KW-CDP) 또는 비교과 통합관리시스템에 로그인합니다.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>프로그램 탐색 &amp; 선택</h4>
+              <p>CARE 영역, GLOW-UP 단계, 학년별 필터로 나에게 맞는 프로그램을 찾아보세요.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>온라인 사전 신청</h4>
+              <p>신청 버튼 클릭 후 정보를 확인하고 접수합니다. 일부 프로그램은 담당 부서 직접 방문 신청도 가능합니다.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>프로그램 참여 &amp; 출석 확인</h4>
+              <p>QR코드 또는 명부 서명으로 출석을 확인합니다. 전 일정 출석이 마일리지 지급의 기본 조건입니다.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h4>마일리지 자동 적립 &amp; 확인</h4>
+              <p>종료 후 마일리지가 자동 적립됩니다. 포털 &gt; 비교과 이력에서 확인하세요.</p>
+            </div>
+          </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-gray reveal">
+      <div class="section-header">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">자주 묻는 질문</h2>
+        <p class="section-desc">비교과 프로그램에 대해 궁금한 점을 확인하세요.</p>
+      </div>
+
+      <details>
+        <summary>Q1. 비교과 프로그램은 어떻게 신청하나요?</summary>
+        <p>경운대학교 학생경력관리시스템(KW-CDP) 접속 → 프로그램지원의 프로그램개설현황 및 신청하기 → 원하는 프로그램 선택 → 온라인 신청 완료 순으로 진행됩니다. 
+          **일부 프로그램은 담당 부서(학생상담센터 등)에 직접 방문하거나 전화 예약이 필요할 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>Q2. 마일리지는 언제, 어디서 확인할 수 있나요?</summary>
+        <p>매학기 종료 후 마일리지장학금 신청 공고 전(매년 3월, 9월) 일괄 부여되며, 학생경력관리시스템(KW-CDP) 마일리지 현황에서 확인 가능합니다.</p>
+      </details>
+      <details>
+        <summary>Q3. 같은 프로그램에 여러 번 참여하면 마일리지가 중복 지급되나요?</summary>
+        <p>네, 중복 지급됩니다. 자세한 사항은 해당 프로그램 공지사항을 확인하거나 담당 부서에 문의하세요.</p>
+      </details>
+      <details>
+        <summary>Q4. 비교과 참여가 학점에 영향을 주나요?</summary>
+        <p>비교과 프로그램은 정규 학점에 직접 반영되지 않습니다. 다만, 마일리지 등급에 따라 장학금 가산점 또는 장학금 신청 자격이 부여될 수 있으며, 취업·진로 역량 강화에 실질적인 도움이 됩니다.
+      </p>
+      </details>
+      <details>
+        <summary>Q5. CARE 영역과 GLOW-UP 단계의 차이가 무엇인가요?</summary>
+        <p>CARE는 지원 영역의 분류입니다 (Career 진로, Academic 학습, Resilience 심리·상담, Experience 대학생활). GLOW-UP은 학생의 성장 여정 단계입니다 (Goal-setting 목표설정 → Learning 학습 → Opportunity 기회탐색 → Well-being 균형실행 → Upgrade 성과공유). 하나의 프로그램이 두 가지 기준을 동시에 갖습니다.</p>
+      </details>
+      <details>
+        <summary>Q6. 수료증은 어떻게 발급받나요?</summary>
+        <p>수료증이 제공되는 프로그램은 출석 요건을 충족하면 담당 부서에서 개별 발급합니다. KW-CDP &gt; 비교과 이력 메뉴에서 온라인 수료증 출력이 가능한 경우도 있습니다. 프로그램별 수료 기준(80% 이상 출석 등)을 반드시 확인하세요.</p>
+      </details>
+      <details>
+        <summary>Q7. RISE사업단 프로그램은 누구나 참여할 수 있나요?</summary>
+        <p> RISE사업단 프로그램은 원칙적으로 전 학년 참여가 가능합니다. 다만, 일부 과정(반도체 역설계, 항공 서비스 등)은 관련 전공 학생을 우선으로 선발하거나, 사전 이수 과목이 요구될 수 있습니다. 모집 공고에서 대상 및 조건을 확인하세요.</p>
+      </details>
+      <details>
+        <summary>Q8. 비교과 마일리지로 받을 수 있는 혜택이 구체적으로 무엇인가요?</summary>
+        <p>재학중 마일리지 취득 누적점수가 일정기준(20점 이상 100점 이하)을 충족하게되면 점당 5,000원을 기준으로 현금으로 전환하여 장학금을 지급합니다.
+       </p>
+      </details>
+      <details>
+        <summary>Q9. 비교과 참여 이력은 졸업 후에도 확인할 수 있나요?</summary>
+        <p>졸업 후에도 학생경력관리시스템(KW-CDP)에 로그인하여 비교과 참여 이력을 조회할 수 있습니다. KW-CDP 포트폴리오에 기록된 비교과 활동은 PDF 형태로 출력하여 취업 서류에 활용할 수 있습니다. 단, 졸업 후 일정 기간이 지나면 접근이 제한될 수 있으니 재학 중에 미리 저장해 두는 것을 권장합니다.</p>
+      </details>
+      <details>
+      <summary>10. 휴학 기간에도 마일리지 적립이 가능한가요?</summary>
+        <p>휴학생의 마일리지 적립은 가능하나 마일리지 장학금 지급 대상에서는 제외됩니다.</p>
+      </details>
+      <details>
+      <summary>11. 졸업 후 미취업 시에도 비교과 프로그램에 참여가 가능한가요?</summary>
+        <p>졸업 후에도 우리대학 대학일자리플러스센터에서 진행하는 진로 및 취업상담, 입사지원서 클리닉, 면접 클리닉 등에 참여할 수 있습니다.</p>
+    </section>
+
+    <!-- 문의처 및 관련부서 안내 -->
+    <section id="contact" class="reveal">
+      <div class="section-header">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">문의처 및 관련 부서 안내</h2>
+        <p class="section-desc">궁금한 점은 언제든지 담당 부서에 문의하세요. 친절히 안내해 드립니다.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" style="border-top-color:var(--primary)">
+          <h4>🏫 인재개발처</h4>
+          <div class="contact-info">
+            진로·역량·창업 지원 총괄<br>
+            📍 어드민센터 2층<br>
+            ☎ 054-479-1034<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:var(--care-e)">
+          <h4>🧠 학생상담센터</h4>
+          <div class="contact-info">
+            심리상담·정서 지원<br>
+            📍 벽강중앙도서관 5층<br>
+            ☎ 054-479-4176<br>
+            🕐 평일 09:00~17:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:var(--care-a)">
+          <h4>📖 교수학습지원센터</h4>
+          <div class="contact-info">
+            학습역량·튜터링 지원<br>
+            📍 벽강중앙도서관 1층<br>
+            ☎ 054-479-1155<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:#92400e">
+          <h4>📚 벽강중앙도서관</h4>
+          <div class="contact-info">
+            정보활용·독서 지원<br>
+            📍 벽강중앙도서관 3층<br>
+            ☎ 054-479-1081<br>
+            🕐 평일 09:00~22:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:#0d9488">
+          <h4>🌏 국제처</h4>
+          <div class="contact-info">
+            글로벌·유학생 지원<br>
+            📍 본관 2층<br>
+            ☎ 054-479-4058<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:var(--care-c)">
+          <h4>💼 대학일자리플러스센터</h4>
+          <div class="contact-info">
+            취업·채용 전문 지원<br>
+            📍 10호관 1층<br>
+            ☎ 054-479-4032<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:#db2777">
+          <h4>🚀 RISE사업단</h4>
+          <div class="contact-info">
+            지역특화 전문 양성<br>
+            📍 어드민센터 1층<br>
+            ☎ 054-479-4140<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:#475569">
+          <h4>🏢 대학생활지원센터</h4>
+          <div class="contact-info">
+            학생 정주여건 개선지원<br>
+            📍 학생생활관 C동동 1층<br>
+            ☎ 054-479-1397<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:var(--care-e)">
+          <h4>🚀 SW중심대학사업단</h4>
+          <div class="contact-info">
+            SW교육 지원<br>
+            📍 2호과 2층<br>
+            ☎ 054-479-1145<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:var(--care-a)">
+          <h4>📖 대학혁신지원사업단</h4>
+          <div class="contact-info">
+            뉴노멀 교육혁신 지원<br>
+            📍 어드민센터 1층<br>
+            ☎ 054-479-4006<br>
+            🕐 평일 09:00~18:00
+          </div>
+        </div>
+        <div class="contact-card" style="border-top-color:#475569">
+          <h4>🏢 사회봉사지원센터</h4>
+          <div class="contact-info">
+            사회봉사활동 지원<br>
+            📍 어드민센터 1층<br>
+            ☎ 054-479-4014<br>
+            🕐 평일 09:00~18:00
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-logo">🎓 경운대학교 비교과 가이드북 2026</div>
+      <p class="footer-slogan">K-Way, Make Impact! — 평범한 일상을 비범한 성취로</p>
+      <div class="footer-links">
+        <a href="#vision">비전</a>
+        <a href="#framework">CARE모델</a>
+        <a href="#programs">프로그램</a>
+        <a href="#roadmap">로드맵</a>
+        <a href="#mileage">마일리지</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">문의처</a>
+      </div>
+      <p class="footer-copy">© 2026 경운대학교 인재개발처| 학생성공디자인센터. All rights reserved. | 비교과 통합관리시스템: KW-CDP</p>
+    </footer>
+
+    <script>
+      // 스크롤 진행 바
+      window.addEventListener('scroll', () => {
+        const bar = document.getElementById('progress-bar');
+        const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        bar.style.width = scrolled + '%';
+      });
+
+      // 탭 전환
+      function openTab(e, id) {
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        e.target.classList.add('active');
+      }
+
+      // 스크롤 reveal 애니메이션
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // 히어로 숫자 카운터
+      function animateCounter(el, target, suffix) {
+        let current = 0;
+        const step = Math.ceil(target / 60);
+        const interval = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = current + suffix;
+          if (current >= target) clearInterval(interval);
+        }, 25);
+      }
+
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const cards = document.querySelectorAll('.glass-card h3');
+            if (cards[0]) animateCounter(cards[0], 100, '+');
+            if (cards[1]) animateCounter(cards[1], 8, '');
+            heroObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      const heroSection = document.querySelector('.hero');
+      if (heroSection) heroObserver.observe(heroSection);
+
+      // 부드러운 스크롤
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.querySelector(a.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    </script>
+  
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>
